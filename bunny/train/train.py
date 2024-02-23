@@ -225,9 +225,6 @@ def train():
             trust_remote_code=True
         )
 
-    if tokenizer.unk_token is not None and tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.unk_token
-
     if model_args.model_type == 'phi-1.5' or model_args.model_type == 'phi-2':
         model = BunnyPhiForCausalLM.from_pretrained(
             model_args.model_name_or_path,
