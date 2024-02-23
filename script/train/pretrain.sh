@@ -10,7 +10,7 @@ deepspeed bunny/train/train.py \
     --model_name_or_path google/gemma-2b \
     --model_type $MODEL_TYPE \
     --version plain \
-    --data_path ./pretrain/blip_laion_cc_sbu_558k.json \
+    --data_path /workspace/axolotl/Gemma/bunny/train/pretrain/blip_laion_cc_sbu_558k.json \
     --image_folder ./pretrain/ \
     --vision_tower google/siglip-so400m-patch14-384 \
     --mm_projector_type mlp2x_gelu \
