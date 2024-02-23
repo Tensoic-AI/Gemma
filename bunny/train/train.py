@@ -224,6 +224,15 @@ def train():
             use_fast=True,
             trust_remote_code=True
         )
+    elif model_args.model_type == 'gemma':
+        tokenizer = transformers.AutoTokenizer.from_pretrained(
+            model_args.model_name_or_path,
+            cache_dir=training_args.cache_dir,
+            model_max_length=training_args.model_max_length,
+            padding_side="right",
+            use_fast=True,
+            trust_remote_code=True
+        )
 
     if model_args.model_type == 'phi-1.5' or model_args.model_type == 'phi-2':
         model = BunnyPhiForCausalLM.from_pretrained(
