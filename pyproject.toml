@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "bunny"
+name = "gemma"
 version = "1.0"
 description = "A family of lightweight multimodal models."
 readme = "README.md"
